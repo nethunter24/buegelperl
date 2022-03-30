@@ -1,10 +1,10 @@
-import Image, ImageDraw
+from PIL import Image, ImageDraw
 import sys, os
 import random
 from numpy import array, sqrt, dot, zeros
 
 # size of your buegelperlen noppenfeld (or what ever this is called)
-size = 29, 29
+size = 29, 29 # x, y
 
 def main():
     for infile in sys.argv[1:]:
@@ -58,7 +58,7 @@ def k_means(image, k):
 
     while changed == True and iterator < 20:
         iterator += 1
-        print "Iteration " + str(iterator)
+        print ("Iteration " + str(iterator))
         
         # generate clusters according to actual means
         # modify result picture 
